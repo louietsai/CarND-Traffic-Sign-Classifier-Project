@@ -57,8 +57,10 @@ Becuase the brightness may not be good for some data images.
 Therefore I use OpenCV to equalize the histogram of the Y channel, and used OpenCV to normalize the image.
 finally I shuffle training data.
 The difference between the original data set and the augmented data set is the following ... 
+
 here is an example for raw image data.
 ![alt text][image2]
+
 here is an exmple after pre-processing
 ![alt text][image3]
 
@@ -122,24 +124,25 @@ Here are five German traffic signs that I found on the web:
 
 Test Accuracy = 0.908
 My Images Accuracy = 0.722
-|   new image prediction  |
-|:---------------------:| 
-|0 : Label= 3 ,Predicted= 2 = 1.0|
-|1 : Label= 37 ,Predicted= 37 = 1.0|
-|2 : Label= 7 ,Predicted= 7 = 1.0|
-|3 : Label= 19 ,Predicted= 19 = 1.0|
-|4 : Label= 9 ,Predicted= 9 = 1.0|
-|5 : Label= 12 ,Predicted= 12 = 1.0|
-|6 : Label= 18 ,Predicted= 18 = 1.0|
-|7 : Label= 25 ,Predicted= 14 = 1.0|
-|8 : Label= 13 ,Predicted= 13 = 1.0|
-|9 : Label= 32 ,Predicted= 32 = 1.0|
-|10 : Label= 0 ,Predicted= 0 = 1.0|
+
+|   new image prediction            |
+|:---------------------------------:| 
+|0 : Label= 3 ,Predicted= 2 = 1.0   |
+|1 : Label= 37 ,Predicted= 37 = 1.0 |
+|2 : Label= 7 ,Predicted= 7 = 1.0   |
+|3 : Label= 19 ,Predicted= 19 = 1.0 |
+|4 : Label= 9 ,Predicted= 9 = 1.0   |
+|5 : Label= 12 ,Predicted= 12 = 1.0 |
+|6 : Label= 18 ,Predicted= 18 = 1.0 |
+|7 : Label= 25 ,Predicted= 14 = 1.0 |
+|8 : Label= 13 ,Predicted= 13 = 1.0 |
+|9 : Label= 32 ,Predicted= 32 = 1.0 |
+|10 : Label= 0 ,Predicted= 0 = 1.0  |
 |11 : Label= 40 ,Predicted= 40 = 1.0|
-|12 : Label= 36 ,Predicted= 18 = 0.999983|
-|13 : Label= 1 ,Predicted= 9 = 1.0|
+|12 : Label= 36 ,Predicted= 18 = 0.9|
+|13 : Label= 1 ,Predicted= 9 = 1.0  |
 |14 : Label= 14 ,Predicted= 14 = 1.0|
-|15 : Label= 2 ,Predicted= 1 = 1.0|
+|15 : Label= 2 ,Predicted= 1 = 1.0  |
 |16 : Label= 38 ,Predicted= 38 = 1.0|
 |17 : Label= 17 ,Predicted= 17 = 1.0|
 

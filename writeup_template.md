@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
 
 You're reading it! and here is a link to my [project code](https://github.com/louietsai/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-**Data Set Summary & Exploration
+**Data Set Summary & Exploration**
 
 
 Number of training examples = 34799
@@ -49,7 +49,7 @@ Here is an exploratory visualization of the data set. It is a distribution diagr
 
 ![alt text][image1]
 
-**Design and Test a Model Architecture
+**Design and Test a Model Architecture**
 
 due to none well-balanced distributed dataset, I decided to generate additional data.
 I used image flip to expand the data number from 34799 to 59788.
@@ -104,7 +104,7 @@ If I don't adopt 2 drop out layers, the model seems to be overfitted, and the va
 
  
 
-**Test a Model on New Images
+**Test a Model on New Images **
 
 
 
@@ -117,11 +117,12 @@ Here are five German traffic signs that I found on the web:
 
 
 
-** New Image Accuracy
+** New Image Accuracy**
 
 Test Accuracy = 0.908
 My Images Accuracy = 0.722
-
+|   new image prediction  |
+|:---------------------:| 
 |0 : Label= 3 ,Predicted= 2 = 1.0|
 |1 : Label= 37 ,Predicted= 37 = 1.0|
 |2 : Label= 7 ,Predicted= 7 = 1.0|

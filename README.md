@@ -1,54 +1,154 @@
-## Project: Build a Traffic Sign Recognition Program
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+#**Traffic Sign Recognition** 
 
-Overview
 ---
-In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then try out your model on images of German traffic signs that you find on the web.
 
-We have included an Ipython notebook that contains further instructions 
-and starter code. Be sure to download the [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
+**Build a Traffic Sign Recognition Project**
 
-We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
-
-To meet specifications, the project will require submitting three files: 
-* the Ipython notebook with the code
-* the code exported as an html file
-* a writeup report either as a markdown or pdf file 
-
-Creating a Great Writeup
----
-A great writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/481/view) as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
-
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
-
-The Project
----
 The goals / steps of this project are the following:
-* Load the data set
+* Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-### Dependencies
-This lab requires:
 
-* [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
+[//]: # (Image References)
 
-The lab environment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
+[image1]: ./examples/data_visualize.png "data visualize"
+[image2]: ./examples/raw.png "raw image"
+[image3]: ./examples/pre-processimg.png "pre-processing"
+[image4]: ./traffic-signs-data/private/0-1.jpg "Traffic Sign 1"
+[image5]: ./traffic-signs-data/private/1-1.jpg "Traffic Sign 2"
+[image6]: ./traffic-signs-data/private/2-1.jpg "Traffic Sign 3"
+[image7]: ./traffic-signs-data/private/3-1.jpg "Traffic Sign 4"
+[image8]: ./traffic-signs-data/private/40-1.jpg "Traffic Sign 5"
+[image9]: ./traffic-signs-data/private/25-1.jpg "Traffic Sign 6"
+[image10]: ./traffic-signs-data/private/36-1.jpg "Traffic Sign 7"
+[image11]: ./traffic-signs-data/private/7-1.jpg "Traffic Sign 8"
+[image12]: ./traffic-signs-data/private/38-1.jpg "Traffic Sign 9"
+[image13]: ./traffic-signs-data/private/9-1.jpg "Traffic Sign 10"
 
-### Dataset and Repository
+---
 
-1. Download the data set. The classroom has a link to the data set in the "Project Instructions" content. This is a pickled dataset in which we've already resized the images to 32x32. It contains a training, validation and test set.
-2. Clone the project, which contains the Ipython notebook and the writeup template.
-```sh
-git clone https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project
-cd CarND-Traffic-Sign-Classifier-Project
-jupyter notebook Traffic_Sign_Classifier.ipynb
-```
 
-### Requirements for Submission
-Follow the instructions in the `Traffic_Sign_Classifier.ipynb` notebook and write the project report using the writeup template as a guide, `writeup_template.md`. Submit the project code and writeup document.
+You're reading it! and here is a link to my [project code](https://github.com/louietsai/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+
+**Data Set Summary & Exploration**
+
+
+Number of training examples = 34799
+Number of validation examples = 4410
+Number of testing examples = 12630
+Image data shape = (32, 32, 3)
+Number of classes = 43
+
+#2. Include an exploratory visualization of the dataset.
+
+Here is an exploratory visualization of the data set. It is a distribution diagram showing how the data is not well-balanced distributed.
+
+![alt text][image1]
+
+**Design and Test a Model Architecture**
+
+due to none well-balanced distributed dataset, I decided to generate additional data.
+I used image flip to expand the data number from 34799 to 59788.
+Becuase the brightness may not be good for some data images.
+Therefore I use OpenCV to equalize the histogram of the Y channel, and used OpenCV to normalize the image.
+finally I shuffle training data.
+The difference between the original data set and the augmented data set is the following ... 
+here is an example for raw image data.
+![alt text][image2]
+here is an exmple after pre-processing
+![alt text][image3]
+
+
+
+
+
+My final model consisted of the following layers:
+
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x3 RGB image   							| 
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  Input = 28x28x6. Output = 14x14x6	|
+| Convolution 3x3	    | 1x1 stride Output = 10x10x16									|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride, Input = 10x10x16. Output = 5x5x16 |
+| Flatten |  Input = 5x5x16. Output = 400
+| Fully connected		| Input = 400. Output = 120       									|
+| RELU					|												|
+| dropout | 50% rate |
+| Fully connected		| Input = 120. Output = 84 |
+| RELU					|												|
+| dropout | 50% rate |
+| Fully connected		| Input = 84. Output = 43 |
+
+ 
+
+
+To train the model, I used an tf.train.AdamOptimizer with 128 batch size, and I run 80 EPOCHS with 0.001 learning rate for the model.
+01
+
+**Validation results**
+
+My final model results were:
+
+| Augment    | pre-processing | Learning Rate	| Drop Out	| Epoch | Validation Accuracy	| Test Accuracy	| 
+|:----------:|:--------------:|:-------------:| :-------:|:-----:|:-------------------:|:-------------:|
+| image flip | hist and norm  | 0.001         |  0.5     |  80   |     0.931           |    0.908      |
+
+If I don't adopt 2 drop out layers, the model seems to be overfitted, and the validation accuracy will be ~0.90.
+
+
+ 
+
+**Test a Model on New Images **
+
+
+
+Here are five German traffic signs that I found on the web:
+
+![alt text][image4] ![alt text][image5] ![alt text][image6] 
+![alt text][image7] ![alt text][image8]![alt text][image9] 
+![alt text][image10] ![alt text][image11]![alt text][image12] 
+![alt text][image13]
+
+
+
+** New Image Accuracy**
+
+Test Accuracy = 0.908
+My Images Accuracy = 0.722
+|   new image prediction  |
+|:---------------------:| 
+|0 : Label= 3 ,Predicted= 2 = 1.0|
+|1 : Label= 37 ,Predicted= 37 = 1.0|
+|2 : Label= 7 ,Predicted= 7 = 1.0|
+|3 : Label= 19 ,Predicted= 19 = 1.0|
+|4 : Label= 9 ,Predicted= 9 = 1.0|
+|5 : Label= 12 ,Predicted= 12 = 1.0|
+|6 : Label= 18 ,Predicted= 18 = 1.0|
+|7 : Label= 25 ,Predicted= 14 = 1.0|
+|8 : Label= 13 ,Predicted= 13 = 1.0|
+|9 : Label= 32 ,Predicted= 32 = 1.0|
+|10 : Label= 0 ,Predicted= 0 = 1.0|
+|11 : Label= 40 ,Predicted= 40 = 1.0|
+|12 : Label= 36 ,Predicted= 18 = 0.999983|
+|13 : Label= 1 ,Predicted= 9 = 1.0|
+|14 : Label= 14 ,Predicted= 14 = 1.0|
+|15 : Label= 2 ,Predicted= 1 = 1.0|
+|16 : Label= 38 ,Predicted= 38 = 1.0|
+|17 : Label= 17 ,Predicted= 17 = 1.0|
+Counted 5 bad predictions
+
+
+
+The model was able to correctly guess 12 of the 17 traffic signs, which gives an accuracy of 72%. 
+
+
+
+
+

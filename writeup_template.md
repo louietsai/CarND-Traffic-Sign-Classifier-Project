@@ -91,7 +91,8 @@ My final model consisted of the following layers:
 
 To train the model, I used an tf.train.AdamOptimizer with 128 batch size, and I run 80 EPOCHS with 0.001 learning rate for the model.
 01
-#**Validation results
+
+**Validation results**
 
 My final model results were:
 

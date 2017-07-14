@@ -142,9 +142,8 @@ My Images Accuracy = 0.722
 |15 : Label= 2 ,Predicted= 1 = 1.0|
 |16 : Label= 38 ,Predicted= 38 = 1.0|
 |17 : Label= 17 ,Predicted= 17 = 1.0|
+
 Counted 5 bad predictions
-
-
 
 The model was able to correctly guess 12 of the 17 traffic signs, which gives an accuracy of 72%. 
 

@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
 
 You're reading it! and here is a link to my [project code](https://github.com/louietsai/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-#**Data Set Summary & Exploration
+**Data Set Summary & Exploration
 
 
 Number of training examples = 34799
@@ -49,7 +49,7 @@ Here is an exploratory visualization of the data set. It is a distribution diagr
 
 ![alt text][image1]
 
-#**Design and Test a Model Architecture
+**Design and Test a Model Architecture
 
 due to none well-balanced distributed dataset, I decided to generate additional data.
 I used image flip to expand the data number from 34799 to 59788.
@@ -104,7 +104,7 @@ If I don't adopt 2 drop out layers, the model seems to be overfitted, and the va
 
  
 
-#**Test a Model on New Images
+**Test a Model on New Images
 
 
 
@@ -117,29 +117,29 @@ Here are five German traffic signs that I found on the web:
 
 
 
-#** New Image Accuracy
+** New Image Accuracy
 
 Test Accuracy = 0.908
 My Images Accuracy = 0.722
 
-0 : Label= 3 ,Predicted= 2 = 1.0
-1 : Label= 37 ,Predicted= 37 = 1.0
-2 : Label= 7 ,Predicted= 7 = 1.0
-3 : Label= 19 ,Predicted= 19 = 1.0
-4 : Label= 9 ,Predicted= 9 = 1.0
-5 : Label= 12 ,Predicted= 12 = 1.0
-6 : Label= 18 ,Predicted= 18 = 1.0
-7 : Label= 25 ,Predicted= 14 = 1.0
-8 : Label= 13 ,Predicted= 13 = 1.0
-9 : Label= 32 ,Predicted= 32 = 1.0
-10 : Label= 0 ,Predicted= 0 = 1.0
-11 : Label= 40 ,Predicted= 40 = 1.0
-12 : Label= 36 ,Predicted= 18 = 0.999983
-13 : Label= 1 ,Predicted= 9 = 1.0
-14 : Label= 14 ,Predicted= 14 = 1.0
-15 : Label= 2 ,Predicted= 1 = 1.0
-16 : Label= 38 ,Predicted= 38 = 1.0
-17 : Label= 17 ,Predicted= 17 = 1.0
+|0 : Label= 3 ,Predicted= 2 = 1.0|
+|1 : Label= 37 ,Predicted= 37 = 1.0|
+|2 : Label= 7 ,Predicted= 7 = 1.0|
+|3 : Label= 19 ,Predicted= 19 = 1.0|
+|4 : Label= 9 ,Predicted= 9 = 1.0|
+|5 : Label= 12 ,Predicted= 12 = 1.0|
+|6 : Label= 18 ,Predicted= 18 = 1.0|
+|7 : Label= 25 ,Predicted= 14 = 1.0|
+|8 : Label= 13 ,Predicted= 13 = 1.0|
+|9 : Label= 32 ,Predicted= 32 = 1.0|
+|10 : Label= 0 ,Predicted= 0 = 1.0|
+|11 : Label= 40 ,Predicted= 40 = 1.0|
+|12 : Label= 36 ,Predicted= 18 = 0.999983|
+|13 : Label= 1 ,Predicted= 9 = 1.0|
+|14 : Label= 14 ,Predicted= 14 = 1.0|
+|15 : Label= 2 ,Predicted= 1 = 1.0|
+|16 : Label= 38 ,Predicted= 38 = 1.0|
+|17 : Label= 17 ,Predicted= 17 = 1.0|
 Counted 5 bad predictions
 
 

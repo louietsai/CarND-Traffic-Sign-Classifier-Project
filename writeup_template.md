@@ -104,7 +104,7 @@ If I don't adopt 2 drop out layers, the model seems to be overfitted, and the va
 
  
 
-###Test a Model on New Images
+#**Test a Model on New Images
 
 
 
@@ -115,41 +115,38 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image10] ![alt text][image11]![alt text][image12] 
 ![alt text][image13]
 
-The first image might be difficult to classify because ...
-
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
-
-Here are the results of the prediction:
-
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+#** New Image Accuracy
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+Test Accuracy = 0.908
+My Images Accuracy = 0.722
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+0 : Label= 3 ,Predicted= 2 = 1.0
+1 : Label= 37 ,Predicted= 37 = 1.0
+2 : Label= 7 ,Predicted= 7 = 1.0
+3 : Label= 19 ,Predicted= 19 = 1.0
+4 : Label= 9 ,Predicted= 9 = 1.0
+5 : Label= 12 ,Predicted= 12 = 1.0
+6 : Label= 18 ,Predicted= 18 = 1.0
+7 : Label= 25 ,Predicted= 14 = 1.0
+8 : Label= 13 ,Predicted= 13 = 1.0
+9 : Label= 32 ,Predicted= 32 = 1.0
+10 : Label= 0 ,Predicted= 0 = 1.0
+11 : Label= 40 ,Predicted= 40 = 1.0
+12 : Label= 36 ,Predicted= 18 = 0.999983
+13 : Label= 1 ,Predicted= 9 = 1.0
+14 : Label= 14 ,Predicted= 14 = 1.0
+15 : Label= 2 ,Predicted= 1 = 1.0
+16 : Label= 38 ,Predicted= 38 = 1.0
+17 : Label= 17 ,Predicted= 17 = 1.0
+Counted 5 bad predictions
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
 
 
-For the second image ... 
+The model was able to correctly guess 12 of the 17 traffic signs, which gives an accuracy of 72%. 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
+
 
 

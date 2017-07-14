@@ -18,19 +18,23 @@ The goals / steps of this project are the following:
 [image1]: ./examples/data_visualize.png "data visualize"
 [image2]: ./examples/raw.png "raw image"
 [image3]: ./examples/pre-processimg.png "pre-processing"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
+[image4]: ./traffic-signs-data/private/0-1.jpg "Traffic Sign 1"
+[image5]: ./traffic-signs-data/private/1-1.jpg "Traffic Sign 2"
+[image6]: ./traffic-signs-data/private/2-1.jpg "Traffic Sign 3"
+[image7]: ./traffic-signs-data/private/3-1.jpg "Traffic Sign 4"
+[image8]: ./traffic-signs-data/private/4-1.jpg "Traffic Sign 5"
+[image9]: ./traffic-signs-data/private/5-1.jpg "Traffic Sign 6"
+[image10]: ./traffic-signs-data/private/6-1.jpg "Traffic Sign 7"
+[image11]: ./traffic-signs-data/private/7-1.jpg "Traffic Sign 8"
+[image12]: ./traffic-signs-data/private/8-1.jpg "Traffic Sign 9"
+[image13]: ./traffic-signs-data/private/9-1.jpg "Traffic Sign 10"
 
 ---
 
 
 You're reading it! and here is a link to my [project code](https://github.com/louietsai/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-#Data Set Summary & Exploration
+#**Data Set Summary & Exploration
 
 
 Number of training examples = 34799
@@ -45,7 +49,7 @@ Here is an exploratory visualization of the data set. It is a distribution diagr
 
 ![alt text][image1]
 
-###Design and Test a Model Architecture
+#**Design and Test a Model Architecture
 
 due to none well-balanced distributed dataset, I decided to generate additional data.
 I used image flip to expand the data number from 34799 to 59788.
@@ -87,7 +91,7 @@ My final model consisted of the following layers:
 
 To train the model, I used an tf.train.AdamOptimizer with 128 batch size, and I run 80 EPOCHS with 0.001 learning rate for the model.
 01
-#Validation results
+#**Validation results
 
 My final model results were:
 
@@ -95,17 +99,21 @@ My final model results were:
 |:----------:|:--------------:|:-------------:| :-------:|:-----:|:-------------------:|:-------------:|
 | image flip | hist and norm  | 0.001         |  0.5     |  80   |     0.931           |    0.908      |
 
+If I don't adopt 2 drop out layers, the model seems to be overfitted, and the validation accuracy will be ~0.90.
+
 
  
 
 ###Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+
 
 Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image7] ![alt text][image8]![alt text][image9] 
+![alt text][image10] ![alt text][image11]![alt text][image12] 
+![alt text][image13]
 
 The first image might be difficult to classify because ...
 

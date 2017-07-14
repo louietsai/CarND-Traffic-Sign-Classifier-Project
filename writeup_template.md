@@ -22,11 +22,11 @@ The goals / steps of this project are the following:
 [image5]: ./traffic-signs-data/private/1-1.jpg "Traffic Sign 2"
 [image6]: ./traffic-signs-data/private/2-1.jpg "Traffic Sign 3"
 [image7]: ./traffic-signs-data/private/3-1.jpg "Traffic Sign 4"
-[image8]: ./traffic-signs-data/private/4-1.jpg "Traffic Sign 5"
-[image9]: ./traffic-signs-data/private/5-1.jpg "Traffic Sign 6"
-[image10]: ./traffic-signs-data/private/6-1.jpg "Traffic Sign 7"
+[image8]: ./traffic-signs-data/private/40-1.jpg "Traffic Sign 5"
+[image9]: ./traffic-signs-data/private/25-1.jpg "Traffic Sign 6"
+[image10]: ./traffic-signs-data/private/36-1.jpg "Traffic Sign 7"
 [image11]: ./traffic-signs-data/private/7-1.jpg "Traffic Sign 8"
-[image12]: ./traffic-signs-data/private/8-1.jpg "Traffic Sign 9"
+[image12]: ./traffic-signs-data/private/38-1.jpg "Traffic Sign 9"
 [image13]: ./traffic-signs-data/private/9-1.jpg "Traffic Sign 10"
 
 ---

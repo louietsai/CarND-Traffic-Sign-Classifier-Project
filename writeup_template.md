@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/data_visualize.png"
+[image1]: ./examples/data_visualize.png "data visualize"
 [image2]: ./examples/raw.png "raw image"
 [image3]: ./examples/pre-processimg.png "pre-processing"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"

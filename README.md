@@ -132,13 +132,16 @@ If I don't adopt 2 drop out layers, the model seems to be overfitted, and the va
 
 
 
-Here are five German traffic signs that I found on the web:
+Here are some German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]![alt text][image9] 
 ![alt text][image10] ![alt text][image11]![alt text][image12] 
 ![alt text][image13]
 
+I choose those images because none image is the same.
+some images are also in an angle or brightness is not good.
+Some dark pictures may let my model to misclassify them.
 
 
 ** New Image Accuracy**
@@ -169,6 +172,13 @@ My Images Accuracy = 0.722
 
 Counted 5 bad predictions
 
+the related 5 images are listed below:
+
+![alt text][image5]
+![alt text][image7]
+![alt text][image9]
+![alt text][image10]
+![alt text][image12]
 The model was able to correctly guess 12 of the 17 traffic signs, which gives an accuracy of 72%. 
 
 

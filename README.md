@@ -183,6 +183,7 @@ the related 5 images are listed below:
 The model was able to correctly guess 12 of the 17 traffic signs, which gives an accuracy of 72%. 
 however, the validation accuracy and test accuracy of my model are both > 0.9.
 it seems that my model still have some overfitting problem.
+However, I may try to use a combined features like HOG + HIST to train the model later to have better accuracy or add some dropout layers to prevent overfitting from my training feature data.
 
 
 

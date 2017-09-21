@@ -179,7 +179,10 @@ the related 5 images are listed below:
 ![alt text][image9]
 ![alt text][image10]
 ![alt text][image12]
+
 The model was able to correctly guess 12 of the 17 traffic signs, which gives an accuracy of 72%. 
+however, the validation accuracy and test accuracy of my model are both > 0.9.
+it seems that my model still have some overfitting problem.
 
 
 

@@ -65,6 +65,7 @@ here is an exmple after pre-processing
 ![alt text][image3]
 
 My first model consisted of the following layers:
+
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
@@ -80,6 +81,7 @@ My first model consisted of the following layers:
 | Fully connected		| Input = 120. Output = 84 |
 | RELU					|												|
 | Fully connected		| Input = 84. Output = 43 |
+
 I choose this first model following with what class has taught us.
 However, the validation accuracy is not good, and is only ~0.9 for this first model.
 

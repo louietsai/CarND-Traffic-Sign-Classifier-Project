@@ -84,7 +84,10 @@ My first model consisted of the following layers:
 
 I choose this first model following with what class has taught us.
 However, the validation accuracy is not good, and is only ~0.9 for this first model.
+the model seems to overfit the data.
 
+In order to prevent overfitting, I add two dropouts in the last two layers to prevent overfitting.
+the dropout layers with 50% drop rate are just after the first and second fully connected layer. 
 
 My final model consisted of the following layers:
 

@@ -64,8 +64,24 @@ here is an example for raw image data.
 here is an exmple after pre-processing
 ![alt text][image3]
 
-
-
+My first model consisted of the following layers:
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 32x32x3 RGB image   							| 
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  Input = 28x28x6. Output = 14x14x6	|
+| Convolution 3x3	    | 1x1 stride Output = 10x10x16									|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride, Input = 10x10x16. Output = 5x5x16 |
+| Flatten |  Input = 5x5x16. Output = 400
+| Fully connected		| Input = 400. Output = 120       									|
+| RELU					|												|
+| Fully connected		| Input = 120. Output = 84 |
+| RELU					|												|
+| Fully connected		| Input = 84. Output = 43 |
+I choose this first model following with what class has taught us.
+However, the validation accuracy is not good, and is only ~0.9 for this first model.
 
 
 My final model consisted of the following layers:
